@@ -1,8 +1,34 @@
+
 <html>
-  <head>
-    <title>个人主页</title>
-  </head>
-  <body>
-    <input type="button"  table="进入" onclick="javascript:alert('进入');"/>
-  </body>
+<head>
+
+   <title></title>
+
+   <script language='javascript' type='text/javascript'>
+    var pb_strConfirmCloseMessage='是否关闭当前窗口?';
+	var pb_blnCloseWindow = false;
+		
+    function ConfirmClose() {
+     window.event.returnValue = pb_strConfirmCloseMessage;
+     pb_blnCloseWindow = true;
+    }
+
+    function ShowConfirmClose(blnValue) {
+     if(blnValue) {
+      document.body.onbeforeunload = ConfirmClose;
+     } else {
+      document.body.onbeforeunload = null;
+     }
+    }
+   </script>
+
+</head>
+
+<body onload='ShowConfirmClose(true);'>
+
+abc
+
+</body>
+
 </html>
+
