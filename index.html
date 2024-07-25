@@ -11,55 +11,83 @@
             margin: 0;
             padding: 0;
         }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 80px 0;
+        }
+        .header h1 {
+            font-size: 3em;
+        }
         .container {
-            max-width: 800px;
-            margin: 50px auto;
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 5px;
-            text-align: center;
+            overflow: hidden;
         }
-        h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        .column {
+            float: left;
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
         }
-        p {
-            line-height: 1.6;
-            color: #666;
+        .column img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #999;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #007bff;
+            background-color: #333;
             color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            text-align: center;
+            padding: 20px 0;
         }
-        .btn:hover {
-            background-color: #0056b3;
+        @media (max-width: 768px) {
+            .column {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="header">
     <h1>Welcome to My Personal Website</h1>
-    <p>This is a simple yet stylish personal website.</p>
-    <p>You can customize this content to showcase your own information.</p>
-    <a href="#" class="btn">Get in Touch</a>
+    <p>This is a visually rich personal website with a full-width layout.</p>
+</div>
+
+<div class="container">
+    <div class="column">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec nisi ut magna bibendum luctus. Donec id volutpat eros.</p>
+        <p>Curabitur ac libero eget nunc lobortis tincidunt. Proin suscipit risus at enim varius, id fermentum ipsum consectetur.</p>
+    </div>
+    <div class="column">
+        <img src="https://via.placeholder.com/600x400" alt="Placeholder Image">
+    </div>
+</div>
+
+<div class="container">
+    <div class="column">
+        <img src="https://via.placeholder.com/600x400" alt="Placeholder Image">
+    </div>
+    <div class="column">
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I've worked on:</p>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+        </ul>
+    </div>
 </div>
 
 <div class="footer">
-    <p>Created with ❤️ by Your Name</p>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
 </div>
 
 </body>
